@@ -4,7 +4,7 @@
     <ul>
       <li v-for="(article, index) in paginatedArticles" :key="article.id" class="article-item">
         <div class="tooltip">
-          <a :href="'#/article/' + article.id" target="_blank" class="article-link">
+          <a :href="`/article/${article.id}`" target="_blank" class="article-link">
             <span :style="{ background: getColor(index), '-webkit-background-clip': 'text', 'background-clip': 'text', 'color': 'transparent' }">
               {{ article.title }}
             </span>
@@ -208,7 +208,7 @@ export default {
   position: absolute;
   z-index: 1;
   bottom: 150%;
-  left: 50%;
+  left: 80%;
   margin-left: -110px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
   opacity: 0;
@@ -220,7 +220,7 @@ export default {
   content: "";
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 10%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
